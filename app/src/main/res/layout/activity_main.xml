@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <CheckBox
+        android:id="@+id/histEqualCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onHistEqualCheckboxClicked"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histogram equalization"
+        app:layout_constraintLeft_toRightOf="@id/histEqualCheckbox"
+        app:layout_constraintTop_toTopOf="@id/histEqualCheckbox"
+        android:layout_marginTop="13dp" />
+
+    <CheckBox
+        android:id="@+id/grayWorldCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/histEqualCheckbox"
+        android:onClick="onHistEqualCheckboxClicked"/>
+
+    <TextView
+        android:id="@+id/grayWorldTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gray world algorithm"
+        app:layout_constraintLeft_toRightOf="@id/grayWorldCheckbox"
+        app:layout_constraintTop_toTopOf="@id/grayWorldCheckbox"
+        android:layout_marginTop="13dp" />
+
+    <CheckBox
+        android:id="@+id/lightBulkCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/grayWorldCheckbox"
+        android:onClick="onHistEqualCheckboxClicked"/>
+
+    <TextView
+        android:id="@+id/lightBulkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light bulk correction"
+        app:layout_constraintLeft_toRightOf="@id/lightBulkCheckbox"
+        app:layout_constraintTop_toTopOf="@id/lightBulkCheckbox"
+        android:layout_marginTop="13dp" />
+
+    <CheckBox
+        android:id="@+id/blueSkyCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lightBulkCheckbox"
+        android:onClick="onHistEqualCheckboxClicked"/>
+
+    <TextView
+        android:id="@+id/blueSkyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue sky correction"
+        app:layout_constraintLeft_toRightOf="@id/blueSkyCheckbox"
+        app:layout_constraintTop_toTopOf="@id/blueSkyCheckbox"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/laplacian_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="48dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/capture"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="60dp"
+        android:text="Focus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
